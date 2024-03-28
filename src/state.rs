@@ -133,6 +133,7 @@ pub fn default() -> State {
 ///
 /// Check [`state`](self) module for usage examples.
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
+#[cfg_attr(feature = "fuzzing", derive(arbitrary::Arbitrary))]
 pub struct State {
     pub(crate) a: u64,
     pub(crate) b: u64,
